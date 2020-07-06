@@ -16,7 +16,13 @@ class Player:
         elif self.perfil == "rancoroso":
             if 0 in self.opponentPlays:
                 return 0
-            else: return 1
+            else: 
+                return 1
+        elif self.perfil == "copiador":
+            if len(self.opponentPlays) == 0:
+                return 1
+            else:
+                return self.opponentPlays[-1]
     
 
     def feedback(self, coinIn):
